@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import Area from './Area';
 
 const Location = () => {
-  const [lat, setLat] = useState('');
-  const [lon, setLon] = useState('');
+  const [lat, setLat] = useState(' ');
+  const [lon, setLon] = useState(' ');
   const [errorLat, setErrorLat] = useState('');
   const [errorLon, setErrorLon] = useState('');
 
@@ -21,6 +22,14 @@ const Location = () => {
       console.error('Geolocation is not supported :(');
     }
   }, []);
+
+  // useEffect(() => {
+  //   const center = [lat, lon];
+  //   setLat(lat)
+  //   setLon(lon)
+  // },
+
+  // [lat, lon]);
 
   const handleLatitudeChange = (event) => {
     const value = event.target.value;
@@ -70,6 +79,8 @@ const Location = () => {
         />
         {errorLon && <p style={{ color: 'red' }}>{errorLon}</p>}
       </form>
+
+      <Area lat={lat} lon={lon}/>
     </>
   );
 };

@@ -1,0 +1,6 @@
+input[type=text]::-webkit-inner-spin-button,
+input[type=text]::-webkit-outer-spin-button {
+
+  opacity: 1
+
+}

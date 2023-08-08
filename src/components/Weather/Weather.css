@@ -1,0 +1,30 @@
+.location-image{
+  height: 30px;
+  width: 30px;
+}
+
+
+/* CitySelector.css (or your custom stylesheet) */
+.progress-bar-container {
+  margin-top: 20px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 20px;
+  background-color: #4c8abd;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background-color: #1e0b52;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  transition: width 0.5s;
+}

@@ -1,14 +1,13 @@
 
-import Area from './components/Location/Area';
-import Location from './components/Location/Location';
+// import Location from './components/Location/Location';
+import CitySelector from './components/Weather/CitySelector';
 
 function App() {
-  const latitude = 37.7749; // Example latitude
-  const longitude = -122.4194; // Example longitude
+
   return (
     <>
-    <Location />
-    <Area latitude={latitude} longitude={longitude}/>
+    {/* <Location /> */}
+    <CitySelector />
     </>
 
   );
