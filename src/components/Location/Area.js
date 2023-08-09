@@ -1,17 +1,27 @@
 import React, { useState, useEffect } from 'react';
-import { MapContainer, Circle, TileLayer, Marker } from 'react-leaflet';
+import { MapContainer, Circle, TileLayer, Marker, useMap } from 'react-leaflet';
 import L from 'leaflet';
+import RangeInput from './RangeInput';
+import './Area.css'
 
-function Area({ lat, lon }) {
+
+function RecenterAutomatically({ lat, lon }) {
+  const map = useMap();
+
+  useEffect(() => {
+    map.setView([lat, lon]);
+  }, [lat, lon, map]);
+
+  return null;
+}
+const Area=({ lat, lon }) =>{
   const [circleRadius, setCircleRadius] = useState(1000);
   const [mapZoom, setMapZoom] = useState(14);
   const maxZoom = 18;
   const [center, setCenter] = useState([lat, lon]);
 
   useEffect(() => {
-    const newCenter = [lat, lon];
-    console.log(newCenter)
-    setCenter(newCenter);
+    setCenter([lat, lon]);
   }, [lat, lon]);
 
   const handleSliderChange = (event) => {
@@ -31,26 +41,19 @@ function Area({ lat, lon }) {
   });
 
   return (
-    <div>
-      <MapContainer center={center} zoom={mapZoom} style={{ height: '60vh', width: '60%' }}>
+    <div >
+      <RangeInput handleSliderChange={handleSliderChange} circleRadius={circleRadius}/>
+      <MapContainer center={center} zoom={mapZoom} className='map'>
         <TileLayer
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         />
         <Marker position={center} icon={icon} />
+        <RecenterAutomatically  lat={lat} lon={lon} />
+
         <Circle center={center} radius={circleRadius} />
+
       </MapContainer>
-      <div style={{ marginTop: '1rem' }}>
-        <input
-          type="range"
-          min={1}
-          max={20}
-          step={1}
-          value={circleRadius / 1000}
-          onChange={handleSliderChange}
-        />
-        <p>Area: {circleRadius / 1000} km</p>
-      </div>
     </div>
   );
 }

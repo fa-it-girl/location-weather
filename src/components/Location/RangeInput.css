@@ -1,0 +1,43 @@
+.range-input{
+  margin-left: 40%;
+  margin-top: 2em;
+}
+
+input[type='range']{
+  height: 2px;
+  width: 20vw;
+
+  margin-bottom: 20px;
+}
+
+.areainkm{
+  display: flex;
+  align-items: center;
+}
+
+.areainkm p{
+  margin-left: 21%;
+}
+.custom-slider::-webkit-slider-thumb {
+  background: #E0FFFF;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+@media (max-width: 768px){
+  .range-input{
+    margin-left: 10%;
+    margin-top: 1em;
+  }
+
+  input[type='range']{
+    height: 2px;
+    width: 80vw;
+  }
+
+
+  .areainkm p{
+    float: right;
+    margin-left: 55%;
+  }
+}

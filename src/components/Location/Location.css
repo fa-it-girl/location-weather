@@ -1,0 +1,44 @@
+.area-selector{
+  text-align: center;
+}
+
+.user-input{
+  display: flex;
+  flex-direction: row ;
+  align-items: center;
+  margin-left: 40%;
+  align-items: flex-start;
+
+}
+
+.location{
+  margin-left: 40%;
+}
+
+.lonlat-input{
+  width: 10vw ;
+  margin: 0%;
+  background-color: #E0FFFF;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px){
+  .location{
+    margin-left: 10%;
+  }
+
+  .user-input{
+    margin-left: 10%;
+    padding-left: 0 !important ;
+  }
+
+  .lonlat-input{
+    width: 40vw ;
+  }
+  /* .lonlat-input{
+   margin-left: -5% !important;
+    width: 100% !important;
+  } */
+}

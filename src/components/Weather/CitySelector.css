@@ -1,18 +1,11 @@
-input[type=text]::-webkit-inner-spin-button,
-input[type=text]::-webkit-outer-spin-button {
-
-  opacity: 1
-
-}
 
 .weather-city{
   text-align: center;
 }
 
-input[type='text']{
-  margin-left: 5%;
-  margin-right: 5%;
-  width: 88%;
+.city-input{
+  margin-left: 40%;
+  width: 20%;
   height: 35px;
   background-color: #E0FFFF;
   border: none !important;
@@ -20,16 +13,29 @@ input[type='text']{
   padding-left: 10px;
 }
 
-input:focus{
-  background-color: #E0FFFF;
-}
 
 .city{
-  margin-left: 6%;
-  margin-right: 5%;
+  margin-left: 40%;
 }
 
 .error-message{
   color: red;
   margin-left: 5%;
+}
+
+@media (max-width: 768px){
+  .city-input{
+    margin-left: 10%;
+    width: 80%;
+  }
+
+
+  .city{
+    margin-left: 10%;
+  }
+
+  .error-message{
+    margin-left: 10% !important;
+  }
+
 }

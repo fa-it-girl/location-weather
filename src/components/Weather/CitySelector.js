@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import Weather from './Weather'; // Make sure the path is correct
 import './CitySelector.css';
 
-const KEY = process.env.KEY;
 
 const CitySelector = () => {
   const [weather, setWeather] = useState({ data: null, error: null });
@@ -14,7 +13,7 @@ const CitySelector = () => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          `https://api.openweathermap.org/data/2.5/weather?q=${userInput.city},${userInput.country}&appid=${KEY}`
+          `https://api.openweathermap.org/data/2.5/weather?q=${userInput.city},${userInput.country}&appid=249efd60e5021ba25f979f2caac2b853`
         );
 
         if (response.ok) {
@@ -47,7 +46,7 @@ const CitySelector = () => {
       <h2 className='weather-city'>Weather City</h2>
       <h3 className='city'>City</h3>
       <form>
-        <input type="text" name="city" onChange={useInputHandler} />
+        <input className='city-input'type="text" name="city" onChange={useInputHandler} />
       </form>
       {weather.error ? (
         <div className="error-message">{weather.error}</div>

@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import Area from './Area';
+import './Location.css'
 
-const Location = () => {
+
+const Location = ({}) => {
   const [lat, setLat] = useState(' ');
   const [lon, setLon] = useState(' ');
   const [errorLat, setErrorLat] = useState('');
@@ -23,13 +25,6 @@ const Location = () => {
     }
   }, []);
 
-  // useEffect(() => {
-  //   const center = [lat, lon];
-  //   setLat(lat)
-  //   setLon(lon)
-  // },
-
-  // [lat, lon]);
 
   const handleLatitudeChange = (event) => {
     const value = event.target.value;
@@ -45,7 +40,7 @@ const Location = () => {
 
   const validateLatitude = (value) => {
     if (value < -90 || value > 90) {
-      setErrorLat('Latitude must be a valid number between -90 and 90');
+      setErrorLat('Latitude is not valid');
     } else {
       setErrorLat('');
     }
@@ -53,7 +48,7 @@ const Location = () => {
 
   const validateLongitude = (value) => {
     if (value < -180 || value > 180) {
-      setErrorLon('Longitude must be a valid number between -180 and 180');
+      setErrorLon('Longitude is not valid');
     } else {
       setErrorLon('');
     }
@@ -61,27 +56,41 @@ const Location = () => {
 
   return (
     <>
-      <h3>Location</h3>
+  <h2 className='area-selector'>Area Selector</h2>
+  <h3 className='location'>Location</h3>
+  <div className='user-input'>
+    <div>
+      <p className='lat'>LATITUDE</p>
       <form>
-        <label>LATITUDE</label><br />
         <input
+
+          className='lonlat-input'
           type='text'
           value={lat}
           onChange={handleLatitudeChange}
         />
-        {errorLat && <p style={{ color: 'red' }}>{errorLat}</p>}
-        <br />
-        <label>LONGITUDE</label><br />
+        {errorLat && <p style={{ color: 'red', fontSize:'10px',marginTop: '2%' }}>{errorLat}</p>}
+      </form>
+    </div>
+    <div >
+      <p>LONGITUDE</p>
+      <form>
         <input
+
+          className='lonlat-input'
           type='text'
           value={lon}
           onChange={handleLongitudeChange}
         />
-        {errorLon && <p style={{ color: 'red' }}>{errorLon}</p>}
+        {errorLon && <p style={{ color: 'red',  fontSize:'10px', marginTop: '2%' }}>{errorLon}</p>}
       </form>
+    </div>
+  </div>
 
-      <Area lat={lat} lon={lon}/>
-    </>
+  <Area lat={lat} lon={lon}/>
+</>
+
+
   );
 };
 

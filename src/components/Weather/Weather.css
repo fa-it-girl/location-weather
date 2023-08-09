@@ -1,32 +1,31 @@
-.location-image{
-  height: 30px;
-  width: 30px;
+.error-message{
+  margin-left: 40% !important;
 }
-
 .progress-bar-container {
-   margin-bottom: 10%;
+   margin-bottom: 5%;
+   margin-top: -10%;
 }
 
 .progress-bar {
-  width: 110%;
+  width: 18vw ;
   height: 8px;
   background-color: #E0FFFF;
-  border-radius: 10px;
+  border-radius: 5px;
   overflow: hidden;
   margin-left: 5%;
+  margin-right: 5%;
 }
 
 .progress-bar-container p {
   float: right;
-  margin-right: -15%;
-  margin-top: -10%;
+  font-size: 0.8em;
+  margin-left: -10%;
 
 }
 .progress {
   height: 100%;
   background-color: #87CEFA;
   border-radius: 10px;
-  /* display: flex; */
   align-items: center;
   justify-content: center;
   color: white;
@@ -34,80 +33,57 @@
   transition: width 0.5s;
 }
 
-.description{
-  border: 1px solid #87CEFA;
-}
-
-.icon-part{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  width: 90%;
-  margin-left: 3%;
-  grid-gap: 5px;
-  text-align: center;
-}
-
-.icon-part img{
-  border: 1px solid grey;
-  border-radius: 50%;
-}
-
 
 .description {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* Divide the description into two columns */
-  grid-gap: 20px; /* Adjust the gap value as needed */
+  border: 1px solid #87CEFA;
+  margin-left: 40%;
+  width: 20vw;
   margin-top: 5%;
-  margin-left: 5%;
-  margin-right: 5%;
-  width: 90%;
   border-radius: 5px;
 }
+
 
 .icon-part {
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-left: 10px;
+  margin-left: 5%;
 }
 
-.icon img {
-  width: 40px;
+.icon img{
+  border: 1px solid grey;
+  border-radius: 50%;
+  width: 30px;
+  margin-right: 5%;
+}
+
+.weather-icon-description{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .weather-description {
   display: flex;
   flex-direction: column;
-
 }
 
 .title{
    color: grey;
+   font-size: 0.8em;
 }
 
-.description-title{
-  margin-left: -8em;
-
-}
-
-.weather-main {
+.weather-main, .weather-description-persentage {
   margin-top: -10px;
-  margin-left: -25px;
-}
-
-.weather-description-persentage{
-  margin-top: -10px;
-  margin-left: -8em;
+  font-size: 0.8em;
 }
 
 
 .sunset-sunrise{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 20px;
+  grid-gap: 10px;
   margin-left: 5%;
-  border-top: 1px solid #87CEFA;
-  width: 110%;
+  border-top: 1px solid #ADD8E6;
+  font-size: 0.8em;
 }
 
 .sunset-main, .sunrise-main, .location-main{
@@ -130,6 +106,7 @@
   grid-template-columns: 1fr 1fr;
   margin-left: 5%;
   margin-top: -10%;
+  font-size: 0.8em;
 }
 .temperature-main{
   margin-top: -10px;
@@ -137,4 +114,20 @@
 
 .temperature-title, .feelslike-title{
   color: grey;
+}
+
+
+@media (max-width: 768px){
+  .description {
+    margin-left: 10%;
+    width: 80vw;
+  }
+
+
+ .progress-bar {
+   width: 70vw ;
+   margin-left: 10%;
+   margin-right: 10%;
+ }
+
 }
