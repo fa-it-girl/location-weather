@@ -3,28 +3,138 @@
   width: 30px;
 }
 
-
-/* CitySelector.css (or your custom stylesheet) */
 .progress-bar-container {
-  margin-top: 20px;
+   margin-bottom: 10%;
 }
 
 .progress-bar {
-  width: 100%;
-  height: 20px;
-  background-color: #4c8abd;
+  width: 110%;
+  height: 8px;
+  background-color: #E0FFFF;
   border-radius: 10px;
   overflow: hidden;
+  margin-left: 5%;
 }
 
+.progress-bar-container p {
+  float: right;
+  margin-right: -15%;
+  margin-top: -10%;
+
+}
 .progress {
   height: 100%;
-  background-color: #1e0b52;
+  background-color: #87CEFA;
   border-radius: 10px;
-  display: flex;
+  /* display: flex; */
   align-items: center;
   justify-content: center;
   color: white;
   font-weight: bold;
   transition: width 0.5s;
+}
+
+.description{
+  border: 1px solid #87CEFA;
+}
+
+.icon-part{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 90%;
+  margin-left: 3%;
+  grid-gap: 5px;
+  text-align: center;
+}
+
+.icon-part img{
+  border: 1px solid grey;
+  border-radius: 50%;
+}
+
+
+.description {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Divide the description into two columns */
+  grid-gap: 20px; /* Adjust the gap value as needed */
+  margin-top: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
+  width: 90%;
+  border-radius: 5px;
+}
+
+.icon-part {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 10px;
+}
+
+.icon img {
+  width: 40px;
+}
+
+.weather-description {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.title{
+   color: grey;
+}
+
+.description-title{
+  margin-left: -8em;
+
+}
+
+.weather-main {
+  margin-top: -10px;
+  margin-left: -25px;
+}
+
+.weather-description-persentage{
+  margin-top: -10px;
+  margin-left: -8em;
+}
+
+
+.sunset-sunrise{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+  margin-left: 5%;
+  border-top: 1px solid #87CEFA;
+  width: 110%;
+}
+
+.sunset-main, .sunrise-main, .location-main{
+  margin-top: -10px;
+}
+
+.location-main img{
+  width: 20px;
+  height: 20px;
+  margin-left: -5px;
+}
+.location-main {
+  display: flex;
+  align-items: center;
+}
+
+
+.temperature{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-left: 5%;
+  margin-top: -10%;
+}
+.temperature-main{
+  margin-top: -10px;
+}
+
+.temperature-title, .feelslike-title{
+  color: grey;
 }

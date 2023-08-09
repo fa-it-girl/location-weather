@@ -9,30 +9,67 @@ const Weather = (props) => {
 
   return (
     <>
+
       <div className="description">
-        <div>
-        <div>
-          <img src={iconUrl} alt="Weather Icon" />
+        <div className="icon-part">
+            <div className="icon">
+              <img src={iconUrl} alt="icon" />
+            </div>
+            <div className="weather-description">
+              <p className="weather-title title">WEATHER</p>
+              <p className="weather-main">{data.weather[0].main}</p>
+            </div>
         </div>
-        <h3>Weather: {data.weather[0].main}</h3>
-          <h3>Description: {data.weather[0].description} : {data.clouds.all} %</h3>
-          <h3>Location: <img className='location-image' src='https://cdn1.iconfinder.com/data/icons/sns-emoji-ui-ux-line/512/iconset050_line_512-10-128.png' alt='data.name'/>{data.name} </h3>
-          <h3>Sunrise: {sunriseTime}</h3>
-          <h3>Sunset: {sunsetTime}</h3>
-          <h3>Temperature: {(data.main.temp - 273.15).toFixed(2)} °C</h3>
-          <h3>Feels like: {data.main.feels_like} °C</h3>
-
+        <div className="description-part">
+          <p className="description-title title">DESCRIPTION</p>
+          <p className="weather-description-persentage">{data.weather[0].description} : {data.clouds.all} %</p>
         </div>
-        <div className="progress-bar-container">
-          <h3>humididy: {data.main.humidity} %</h3>
-        <div className="progress-bar">
 
-          <div className="progress" style={{ width: `${data.main.humidity}%` }}>
+        <div className='sunset-sunrise'>
+          <div>
+              <p className="sunset-title title">SUNSET</p>
+              <p className="sunset-main">{sunsetTime}</p>
+          </div>
+          <div>
+              <p className="sunrise-title title">SUNRISE</p>
+              <p className="sunrise-main">{sunriseTime}</p>
+          </div>
+          <div>
+              <p className="location-title title">LOCATION</p>
+              <p className="location-main">
+                <img className='location-image' src='https://cdn1.iconfinder.com/data/icons/sns-emoji-ui-ux-line/512/iconset050_line_512-10-128.png' alt='data.name' />
+                <span className="location-text">{data.name}</span>
+              </p>
 
           </div>
-        </div>
+        </div> <br />
+
+        <div className='temperature'>
+          <div>
+             <p className="temperature-title">TEMPERATURE</p>
+             <p className="temperature-main">{(data.main.temp - 273.15).toFixed(2)}</p>
+          </div>
+          <div>
+             <p className="feelslike-title">FEELS LIKE</p>
+             <p className="temperature-main">{data.main.feels_like}</p>
+          </div>
+        </div> <br />
+
+        <div className="progress-bar-container">
+          <p> {data.main.humidity}% humididy</p>
+          <div className="progress-bar">
+            <div className="progress" style={{ width: `${data.main.humidity}%` }}></div>
+          </div>
       </div>
       </div>
+
+
+
+
+
+
+
+
     </>
   );
 };

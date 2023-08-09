@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Weather from './Weather'; // Make sure the path is correct
 import './CitySelector.css';
 
-const KEY = '249efd60e5021ba25f979f2caac2b853';
+const KEY = process.env.KEY;
 
 const CitySelector = () => {
   const [weather, setWeather] = useState({ data: null, error: null });
@@ -44,11 +44,10 @@ const CitySelector = () => {
 
   return (
     <div>
-      <h1>City</h1>
+      <h2 className='weather-city'>Weather City</h2>
+      <h3 className='city'>City</h3>
       <form>
         <input type="text" name="city" onChange={useInputHandler} />
-
-
       </form>
       {weather.error ? (
         <div className="error-message">{weather.error}</div>
