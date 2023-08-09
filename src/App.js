@@ -6,8 +6,9 @@ import CitySelector from './components/Weather/CitySelector';
 function App() {
   return (
     <Router>
+      <Route path="/location" element={<Location />} />
       <Routes>
-        <Route path="/location" element={<Location />} />
+
         <Route path="/weather" element={<CitySelector />} />
       </Routes>
       <Navbar />
