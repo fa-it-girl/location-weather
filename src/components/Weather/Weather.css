@@ -7,19 +7,20 @@
 }
 
 .progress-bar {
-  width: 18vw ;
+  width: 20vw ;
   height: 8px;
   background-color: #E0FFFF;
   border-radius: 5px;
   overflow: hidden;
-  margin-left: 5%;
+  /* margin-left: 5%; */
   margin-right: 5%;
 }
 
 .progress-bar-container p {
   float: right;
   font-size: 0.8em;
-  margin-left: -10%;
+  margin-left: -20%;
+
 
 }
 .progress {
@@ -53,7 +54,8 @@
   border: 1px solid grey;
   border-radius: 50%;
   width: 30px;
-  margin-right: 5%;
+  margin-right: 5% !important;
+
 }
 
 .weather-icon-description{
@@ -126,7 +128,7 @@
 
  .progress-bar {
    width: 70vw ;
-   margin-left: 10%;
+   margin-left: 5%;
    margin-right: 10%;
  }
 

@@ -5,19 +5,17 @@ import Navbar from './components/Navbar';
 import CitySelector from './components/Weather/CitySelector';
 
 function App() {
-  const [activeComponent, setActiveComponent] = useState('location');
 
-  const toggleComponent = () => {
-    setActiveComponent(activeComponent === 'location' ? 'weather' : 'location');
-  };
 
   return (
     <Router>
+
       <Routes>
+        <Route path="/" element={<Location />} />
         <Route path="/location" element={<Location />} />
         <Route path="/weather" element={<CitySelector />} />
       </Routes>
-      <Navbar onClick={toggleComponent} />
+    <Navbar  />
     </Router>
   );
 }

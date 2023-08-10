@@ -1,13 +1,13 @@
 .range-input{
   margin-left: 40%;
-  margin-top: 2em;
+  margin-top: 1em;
+
 }
 
 input[type='range']{
-  height: 2px;
+  height: 5px;
   width: 20vw;
-
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .areainkm{
@@ -18,11 +18,8 @@ input[type='range']{
 .areainkm p{
   margin-left: 21%;
 }
-.custom-slider::-webkit-slider-thumb {
-  background: #E0FFFF;
-  -webkit-appearance: none;
-  appearance: none;
-}
+
+
 
 @media (max-width: 768px){
   .range-input{
@@ -40,4 +37,5 @@ input[type='range']{
     float: right;
     margin-left: 55%;
   }
+
 }

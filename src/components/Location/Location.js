@@ -64,7 +64,7 @@ const Location = ({}) => {
       <form>
         <input
 
-          className='lonlat-input'
+          className='lat-input'
           type='text'
           value={lat}
           onChange={handleLatitudeChange}
@@ -77,7 +77,7 @@ const Location = ({}) => {
       <form>
         <input
 
-          className='lonlat-input'
+          className='lon-input'
           type='text'
           value={lon}
           onChange={handleLongitudeChange}

@@ -14,6 +14,7 @@ function RangeInput({ circleRadius, handleSliderChange }) {
         min={1}
         max={20}
         step={1}
+        className="custom-range"
         value={circleRadius / 1000}
         onChange={handleSliderChange}
       />
