@@ -4,14 +4,14 @@
 This application utilizes Leaflet, an open-source JavaScript library known for creating interactive maps optimized for mobile devices. It empowers users to effortlessly retrieve their current location. The application offers the flexibility to adjust the circle's radius to encompass a larger or smaller area. By simply clicking on the cloud icon, users are seamlessly transported to a weather page. Upon arriving at the weather page, users can input the desired city name and receive comprehensive and up-to-date weather details. These details are fetched from the OpenWeatherMap API, providing users with accurate and real-time weather information.
 
 
-## Screenshots
+## Demo
 
 ![App Screenshot](https://fa-private-folder.s3.eu-west-1.amazonaws.com/images/demo.gif)
 
 
-## Demo
+## Link of the Demo
 
-https://fa-geocoding-weather.netlify.app/weather
+https://fa-geocoding-weather.netlify.app
 
 
 
